@@ -34,6 +34,7 @@ ____
 **Добавление актера**:
 
 ![Добавление актера](https://sun9-north.userapi.com/sun9-78/s/v1/ig2/HjAD-fuZ7uP7VsAC0MylcA0oEv6Nn4uDc42d-ZgLF4WqnEhgQ8UmXKVYl_GfcEXz0D8UDpo5GE3u283ZM_8sNpKU.jpg?size=920x686&quality=96&type=album, "Добавление")
+
 **Актер добавлен**:
 
 ![Добавлен](https://sun9-north.userapi.com/sun9-82/s/v1/ig2/SIjxxO44u9jFd5s5lJ6vTHvhrqQLPvF8Lalolv0Oq3FtbV-e1uoEFjESnHzfbO0h_UkRY8Ha3Css0ZTSzMvWfhFy.jpg?size=1511x618&quality=96&type=album, "Добавлен")
