@@ -1,0 +1,72 @@
+﻿@model Movie
+
+@{
+    ViewData["Title"] = "Подробнее о фильме";
+}
+
+<div class="row">
+    <div class="col-md-8 offset-2">
+        <div class="card mb-12">
+            <div class="row g-0">
+                <div class="col-md-12">
+                    <div class="card-header text-white bg-info">
+                        <p class="card-text">
+                            <h5 class="card-title">
+                                @Model.Name
+                            </h5>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <img src="@Model.ImgUrl" width="100%" alt="@Model.Name">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <p class="card-text">@Model.Description</p>
+                        <p class="card-text">
+                            <b>Компания: </b>
+                            <a asp-controller="Cinema" asp-action="Details" asp-route-id="@Model.CinemaId">
+                                @Model.Cinema.Name
+                            </a>
+                        </p>
+                        <p class="card-text">
+                            <b>Режиссер: </b>
+                            <a asp-controller="Producer" asp-action="Details" asp-route-id="@Model.ProducerId">
+                                @Model.Producer.Name
+                            </a>
+                        </p>
+                        <p class="card-text"><b>Жанр: </b>@Model.MovieCategory</p>
+                        <p class="card-text"><b>Дата релиза: </b>@Model.DateReleased</p>
+                        <p class="card-text">
+                            <b>Актеры: </b>
+                            <hr />
+                            <div class="row">
+                                @foreach (var actor in Model.Actor_Movies)
+                                {
+                                    <div class="column text-center">
+                                        <img class="border-info rounded-circle" src="@actor.Actor.ImgUrl" style="max-width: 150px" />
+                                        <br />
+                                        <a asp-controller="Actor" asp-action="Details" asp-route-id="@actor.ActorId">@actor.Actor.Name</a>
+                                    </div>
+                                }
+                            </div>
+                        </p>
+
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="card-footer">
+                        <p class="card-text">
+                            <a class="btn btn-outline-primary float-right" asp-action="Index">
+                                Назад к списку
+                            </a>
+                            <a class="btn btn-success text-white" 
+                               asp-controller="Order" 
+                               asp-action="AddItemToShoppingCart" asp-route-id="@Model.Id"><i class="bi bi-cart-plus"></i> Добавить в корзину (Price @Model.Price.ToString("c"))</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
